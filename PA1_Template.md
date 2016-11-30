@@ -83,7 +83,7 @@ ggplot(data = byDay, aes(totalSteps)) + geom_histogram() + ggtitle('histogram of
 ## `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.
 ```
 
-![](PA1_Template_files/figure-html/unnamed-chunk-3-1.png)<!-- -->
+![](PA1_Template_files/figure-html/dailyAvgStepsHistogram.png)<!-- -->
 
 ```r
 print(paste0('the mean daily steps taken was: ',round(mean(byDay$totalSteps), 2)))
@@ -114,7 +114,7 @@ byInterval = activity %>%
 ggplot(byInterval, aes(interval, averageSteps)) + geom_line() + ggtitle('Daily Average Activity')
 ```
 
-![](PA1_Template_files/figure-html/unnamed-chunk-4-1.png)<!-- -->
+![](PA1_Template_files/figure-html/avgStepsByDaypart.png)<!-- -->
 
 ```r
 mostSteps = which.max(byInterval$averageSteps)
@@ -161,7 +161,7 @@ ggplot(byDay_imputed, aes(totalSteps)) + geom_histogram() + ggtitle('histogram o
 ## `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.
 ```
 
-![](PA1_Template_files/figure-html/unnamed-chunk-5-1.png)<!-- -->
+![](PA1_Template_files/figure-html/imputedDailyAvgStepsHistogram.png)<!-- -->
 
 ```r
 print(paste0('the mean daily steps taken was: ',round(mean(byDay_imputed$totalSteps), 2)))
@@ -203,5 +203,5 @@ ggplot(byIntervalByWeekPart,
   ggtitle('Average Steps By Daypart - Weekend vs. Weekday')
 ```
 
-![](PA1_Template_files/figure-html/unnamed-chunk-6-1.png)<!-- -->
+![](PA1_Template_files/figure-html/avgStepsByDaypart_WeekPart.png)<!-- -->
 
